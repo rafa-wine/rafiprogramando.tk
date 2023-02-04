@@ -178,6 +178,10 @@ nav ul {
   color: var(--accent-color);
 }
 
+.movil-text {
+  display: none;
+}
+
 /* Start Animation Typing */
 
 .wrapper {
@@ -343,13 +347,39 @@ nav ul {
 
 /* End Subviews style */
 
+/* ------------- Media queries ------------------------ */
+
 @media (max-width: 900px) {
-  .global-section {
+  header {
+    margin-top: 25px;
+    height: fit-content;
+  }
+
+  .navigation-list {
     flex-direction: column;
+  }
+
+  .navigation-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .switch-container {
+    margin-top: 25px;
+  }
+
+  .global-section {
+    height: fit-content;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 60px;
   }
 
   .text-section {
     width: 90%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     margin-top: 25px;
     margin-left: 0px;
   }
@@ -360,6 +390,16 @@ nav ul {
 
   .text-title {
     font-size: 26px;
+  }
+
+  .wrapper {
+    display: none;
+  }
+
+  .movil-text {
+    display: flex;
+    font-size: 22px;
+    color: var(--secondary-color);
   }
 
   .text-subtitle {
