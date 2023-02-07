@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>rafiprogramando</title>
-    <link rel="icon" href="./assets/bees.png" type="image/x-icon" />
+    <link rel="icon" href="./assets/bee.png" type="image/x-icon" />
     <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/typingEffect.css" />
     <script
       src="./scripts/script.js"
+      type="application/javascript"
+      defer
+    ></script>
+    <script
+      src="./scripts/typingEffect.js"
       type="application/javascript"
       defer
     ></script>
@@ -17,49 +23,49 @@
     <header>
       <nav class="navigation-bar">
         <ul class="navigation-list">
-          <li class="logo">
+          <li class="logo-container">
             rafi<span
               class="logo-colorize"
               onclick="aboutMe(
                 'global-section', 'about-me-container', 'history-container', 'projects-container', 'contact-container')"
-              >programando</span
+              >.programando()</span
             >
           </li>
-          <li>
+          <li class="links-container">
             <ul class="navigation-links">
               <li
                 class="nav-item"
                 onclick="aboutMe('about-me-container', 'global-section', 'history-container', 'projects-container', 'contact-container')"
               >
-                <p class="switch-frame about-me">sobre_mí()</p>
+                <p class="switch-frame about-me">.sobre_mí()</p>
               </li>
               <li
                 class="nav-item"
                 onclick="aboutMe(
                 'history-container', 'about-me-container', 'global-section', 'projects-container', 'contact-container')"
               >
-                <p class="switch-frame">historia()</p>
+                <p class="switch-frame">.historia()</p>
               </li>
               <li
                 class="nav-item"
                 onclick="aboutMe(
                 'projects-container', 'about-me-container', 'history-container', 'global-section', 'contact-container')"
               >
-                <p class="switch-frame">proyectos()</p>
+                <p class="switch-frame">.proyectos()</p>
               </li>
               <li
                 class="nav-item"
                 onclick="aboutMe(
                 'contact-container', 'about-me-container', 'history-container', 'projects-container', 'global-section')"
               >
-                <p class="switch-frame">contáctame()</p>
+                <p class="switch-frame">.contáctame()</p>
               </li>
             </ul>
           </li>
-          <li>
+          <li class="switch-container-principal">
             <ul class="switch-container">
               <li>
-                <p class="switch-text">light()</p>
+                <p class="switch-text">.light()</p>
               </li>
               <li>
                 <div id="hi" class="theme-switch">
@@ -67,7 +73,7 @@
                 </div>
               </li>
               <li>
-                <p class="switch-text">dark()</p>
+                <p class="switch-text">.dark()</p>
               </li>
             </ul>
           </li>
@@ -75,7 +81,7 @@
       </nav>
     </header>
     <div class="global-render">
-      <section class="global-section">
+      <section class="global-section render">
         <div class="avatar-container">
           <div class="avatar-section">
             <img class="avatar-img" src="./assets/me_web.png" alt="avatar" />
@@ -85,53 +91,61 @@
           <section class="introuccig-section">
             <p class="text-hi">Hola...</p>
             <h1 class="text-title">
-              Me llamo <span class="marker-title">Rafael Barrientos</span>
+              soy <span class="marker-title">Rafael Barrientos</span>
             </h1>
             <div class="wrapper">
-              <div class="static-txt">Soy</div>
-              <ul class="dynamic-txts">
-                <li><span>Desarrollador Full Stack</span></li>
-                <li><span>Desarrollador Web</span></li>
-                <li><span>Desarrollador Móvil</span></li>
-                <li><span>Desarrollador IoT</span></li>
-                <li><span>Diseñador UI & UX</span></li>
-                <li><span>Desarrollador de Software</span></li>
-              </ul>
-            </div>
-            <div class="movil-text">
-              <p>Soy Desarrollador de Software</p>
+              <div data-text></div>
+              <span class="item">Diseñador UI & UX</span>
+              <span class="item">Diseñador Web</span>
+              <span class="item">Desarrollador Full Stack</span>
+              <span class="item">Desarrollador IoT</span>
             </div>
           </section>
           <section class="returns-section">
             <p class="text-simple">
-              Este es mi portafolio digital. ¡Espero poder ayudarte!
+              Fuertemente influenciado por la narración de historias, las
+              interacciones y la experiencia de usuario. Adicto a la música, las
+              artes visuales y los juegos. <br />De Hidalgo, radicando en
+              Querétaro.
             </p>
           </section>
-          <div>
+          <div class="social-container">
+            <a
+              href="https://www.linkedin.com/in/rafael-barrientos-garcia-9934b3244/"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin social"></i>
+            </a>
+            <a href="https://github.com/rafa-wine" target="_blank">
+              <i class="fa-brands fa-github social"></i>
+            </a>
+            <p>Descarga mi</p>
             <a
               href="./resources/rafiprogramando_cv.pdf"
               download="rafiprogramando_cv"
               class="cv-button"
-              >Descargar CV</a
             >
+              <p class="text-cv">CV</p>
+              <i class="fa-solid fa-download"> </i>
+            </a>
           </div>
         </section>
       </section>
       <div class="about-me-container format-subviews">
         <span class="loader"></span>
-        <p>sobre_mí().building</p>
+        <p>.sobre_mí().build()</p>
       </div>
       <div class="history-container format-subviews">
         <span class="loader"></span>
-        <p>historia().building</p>
+        <p>.historia().build()</p>
       </div>
       <div class="projects-container format-subviews">
         <span class="loader"></span>
-        <p>proyectos.building</p>
+        <p>.proyectos().build()</p>
       </div>
       <div class="contact-container format-subviews">
         <span class="loader"></span>
-        <p>contáctame.building</p>
+        <p>.contáctame().build()</p>
       </div>
     </div>
   </body>

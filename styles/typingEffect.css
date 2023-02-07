@@ -1,0 +1,40 @@
+.wrapper {
+  font-size: 22px;
+}
+
+.wrapper .item {
+  visibility: hidden;
+  display: none;
+}
+
+.wrapper > div {
+  min-height: 25px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: flex-end;
+  color: #02be3b;
+}
+
+.wrapper > div:after {
+  content: "";
+  width: 10px;
+  height: 4px;
+  display: block;
+  background: var(--secondary-color);
+  color: orange;
+  margin-bottom: 4px;
+  margin-left: 2px;
+  animation-duration: 350ms;
+  animation-name: fade;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

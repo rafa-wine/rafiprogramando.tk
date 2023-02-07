@@ -1,5 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/hardino");
 @import url("https://fonts.cdnfonts.com/css/jack-input");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 
 :root {
   --primary-color: #f2f2f2;
@@ -58,6 +59,14 @@ a {
   padding: 0px 70px;
 }
 
+.links-container {
+  width: 50%;
+}
+
+.switch-container-principal {
+  width: 25%;
+}
+
 nav ul {
   display: flex;
   flex-direction: row;
@@ -65,34 +74,28 @@ nav ul {
 
 .navigation-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 25px;
 }
 
 .nav-item {
   cursor: pointer;
-  border-radius: 25px;
 }
 
-.nav-item:hover {
-  padding: 5px 15px;
-  background-color: var(--accent-color);
-  border-radius: 25px;
+.nav-item:hover > p {
+  color: var(--accent-color);
 }
 
-.logo {
+.logo-container {
   font-family: "Hardino", sans-serif;
   font-size: 26px;
+  width: 25%;
   cursor: pointer;
 }
 
-.logo:hover {
-  transform: scale(1.1);
-}
-
 .logo-colorize {
-  font-family: "Hardino", sans-serif;
+  font-family: "JackInput", sans-serif;
   font-size: 26px;
   color: var(--accent-color);
 }
@@ -149,7 +152,8 @@ nav ul {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 70px);
+  height: fit-content;
+  margin-top: 60px;
 }
 
 .text-section {
@@ -164,7 +168,6 @@ nav ul {
 .text-hi {
   color: var(--accent-color);
   font-size: 32px;
-  margin-bottom: 5px;
   font-family: "Hardino", sans-serif;
 }
 
@@ -178,71 +181,6 @@ nav ul {
   color: var(--accent-color);
 }
 
-.movil-text {
-  display: none;
-}
-
-/* Start Animation Typing */
-
-.wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.wrapper .static-txt {
-  color: var(--secondary-color);
-  font-size: 34px;
-}
-
-.wrapper .dynamic-txts {
-  margin-left: 15px;
-  line-height: 45px;
-  height: 45px;
-  overflow: hidden;
-}
-
-.dynamic-txts li {
-  list-style: none;
-  color: var(--accent-color);
-  font-size: 34px;
-  top: 0;
-  position: relative;
-  animation: slide 18s steps(6) infinite;
-}
-
-@keyframes slide {
-  100% {
-    top: -270px;
-  }
-}
-
-.dynamic-txts li {
-  position: relative;
-}
-
-.dynamic-txts li::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--primary-color);
-  border-left: 5px solid var(--accent-color);
-  animation: typing 3s steps(10) infinite;
-}
-
-@keyframes typing {
-  40%,
-  60% {
-    left: calc(100% + 30px);
-  }
-  100% {
-    left: 0;
-  }
-}
-
-/* Start Animation Typing  */
-
 .text-subtitle {
   font-size: 34px;
 }
@@ -251,8 +189,38 @@ nav ul {
   color: rgb(255, 83, 83);
 }
 
+.returns-section {
+  width: 600px;
+  margin: 15px 0px;
+}
+
 .text-simple {
-  color: rgb(161, 161, 161);
+  color: #b27c32;
+}
+
+.social-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social {
+  font-size: 25px;
+}
+
+.social:hover {
+  color: var(--accent-color);
+}
+
+.text-cv {
+  font-size: 20px;
+}
+
+.fa-download {
+  margin-left: 7px;
+  font-size: 18px;
 }
 
 .avatar-container {
@@ -282,11 +250,10 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 40px;
+  width: 77px;
+  height: 32px;
   border: 2px solid var(--accent-color);
-  border-radius: 10px;
-  margin-top: 25px;
+  border-radius: 30px;
   cursor: pointer;
 }
 
@@ -364,6 +331,11 @@ nav ul {
     flex-direction: column;
   }
 
+  .logo-container {
+    width: 100%;
+    text-align: center;
+  }
+
   .switch-container {
     margin-top: 25px;
   }
@@ -384,6 +356,10 @@ nav ul {
     margin-left: 0px;
   }
 
+  .returns-section {
+    width: 100%;
+  }
+
   .text-hi {
     font-size: 22px;
   }
@@ -393,13 +369,10 @@ nav ul {
   }
 
   .wrapper {
-    display: none;
-  }
-
-  .movil-text {
     display: flex;
-    font-size: 22px;
-    color: var(--secondary-color);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .text-subtitle {
