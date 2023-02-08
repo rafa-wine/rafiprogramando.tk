@@ -1,3 +1,40 @@
+/* ----------------- Current Theme ----------------------*/
+var isActive = false;
+
+async function changeTheme(element) {
+  if (!isActive) {
+    document.body.classList.toggle("dark-theme");
+    element.classList.remove("theme-light");
+    element.classList.add("theme-dark");
+    localStorage.setItem("theme", "dark");
+    isActive = true;
+  } else {
+    document.body.classList.toggle("dark-theme");
+    element.classList.remove("theme-dark");
+    element.classList.add("theme-light");
+    localStorage.setItem("theme", "light");
+    isActive = false;
+  }
+}
+
+async function initTheme() {
+  const element = document.getElementsByClassName("switch")[0];
+  if (localStorage.getItem("theme") === "dark") {
+    isActive = false;
+    changeTheme(element);
+  }
+}
+
+initTheme();
+
+/* element = document.getElementsByClassName("switch")[0];
+if (localStorage.getItem("theme") === "dark") {
+  isActive = false;
+  changeTheme(element);
+} */
+
+/* ----------------- End Current Theme ----------------------*/
+
 const dimensions = () => {
   const width = screen.width;
   const height = screen.height;
@@ -8,11 +45,6 @@ const dimensions = () => {
   )[0].style.height = `calc(${height}px - 210px)`;
   console.log(width, height);
 };
-
-function changeTheme(element) {
-  document.body.classList.toggle("dark-theme");
-  element.classList.toggle("theme-change");
-}
 
 function home() {
   document.getElementsByClassName("global-section")[0].style.display = "flex";

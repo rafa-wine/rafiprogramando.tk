@@ -5,12 +5,17 @@
 :root {
   --primary-color: #f2f2f2;
   --secondary-color: #1c1d1f;
-  --accent-color: #e5b427;
+  --accent-color: #daa300;
+  --terminal-success: #02be3b;
+  --terminal-comments: #5a5a5a;
+  --brown-color: #b16a08;
 }
 
 .dark-theme {
   --primary-color: #1c1d1f;
   --secondary-color: #f2f2f2;
+  --accent-color: #e5b427;
+  --brown-color: #b27c32;
 }
 
 * {
@@ -18,10 +23,10 @@
   padding: 0%;
   font-family: "JackInput", sans-serif;
   color: var(--secondary-color);
-  transition: 0.3s;
 }
 
 body {
+  transition: background-color 0.3s;
   background-color: var(--primary-color);
 }
 
@@ -79,24 +84,36 @@ nav ul {
   gap: 25px;
 }
 
-.nav-item {
-  cursor: pointer;
+.links-container > ul > li > a {
+  cursor: default;
 }
 
-.nav-item:hover > p {
+.link-to:hover {
+  transition: 0.3s;
   color: var(--accent-color);
 }
 
-.logo-container {
+.logo-container > a {
   font-family: "Hardino", sans-serif;
   font-size: 26px;
   width: 25%;
-  cursor: pointer;
+}
+
+.home-button {
+  cursor: default;
+}
+
+.home-button:hover > span {
+  transition: 0.3s;
+  color: var(--accent-color);
 }
 
 .logo-colorize {
   font-family: "JackInput", sans-serif;
   font-size: 26px;
+}
+
+.selected {
   color: var(--accent-color);
 }
 
@@ -133,9 +150,14 @@ nav ul {
   margin-right: 2px;
 }
 
-.theme-change {
-  transition: 0.5s;
+.theme-dark {
+  transition: 0.3s;
   transform: translateX(20px);
+}
+
+.theme-light {
+  transition: 0.3s;
+  transform: translateX(0px);
 }
 
 .switch-text {
@@ -195,7 +217,7 @@ nav ul {
 }
 
 .text-simple {
-  color: #b27c32;
+  color: var(--brown-color);
 }
 
 .social-container {
@@ -211,6 +233,7 @@ nav ul {
 }
 
 .social:hover {
+  transition: 0.3s;
   color: var(--accent-color);
 }
 
@@ -258,6 +281,7 @@ nav ul {
 }
 
 .cv-button:hover {
+  transition: 0.3s;
   background-color: var(--accent-color);
 }
 
