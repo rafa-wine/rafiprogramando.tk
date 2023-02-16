@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rafi.programando()</title>
+    <title>rafi.programando</title>
     <link rel="icon" href="./assets/bee.png" type="image/x-icon" />
     <link rel="stylesheet" href="./styles/home.css" />
     <link rel="stylesheet" href="./styles/typingEffect.css" />
+    <link rel="stylesheet" href="./styles/loader.css" />
     <script
       src="./scripts/script.js"
       type="application/javascript"
@@ -24,50 +25,36 @@
       <nav class="navigation-bar">
         <ul class="navigation-list">
           <li class="logo-container">
-            <a href="./index.html" class="home-button">
+            <a href="./index.html">
               rafi<span class="logo-colorize selected">.programando()</span>
             </a>
           </li>
           <li class="links-container">
             <ul class="navigation-links">
-              <li
-                class="nav-item"
-                onclick="aboutMe('about-me-container', 'global-section', 'history-container', 'projects-container', 'contact-container')"
-              >
+              <li class="nav-item">
                 <a href="./views/about.html">
                   <p class="switch-frame about-me link-to">.sobre_mí()</p>
                 </a>
               </li>
-              <li
-                class="nav-item"
-                onclick="aboutMe(
-                'history-container', 'about-me-container', 'global-section', 'projects-container', 'contact-container')"
-              >
+              <li class="nav-item">
                 <a href="./views/history.html">
                   <p class="switch-frame link-to">.historia()</p>
                 </a>
               </li>
-              <li
-                class="nav-item"
-                onclick="aboutMe(
-                'projects-container', 'about-me-container', 'history-container', 'global-section', 'contact-container')"
-              >
+              <li class="nav-item">
                 <a href="./views/projects.html">
                   <p class="switch-frame link-to">.proyectos()</p>
                 </a>
               </li>
-              <li
-                class="nav-item"
-                <!--
-                onclick="aboutMe(
-                'contact-container', 'about-me-container', 'history-container', 'projects-container', 'global-section')"
-                --
-              >
+              <li class="nav-item">
                 <a href="./views/contact.html">
                   <p class="switch-frame link-to">.contáctame()</p>
                 </a>
               </li>
             </ul>
+          </li>
+          <li class="menu-button-container" onclick="menuBehavior()">
+            <p class="menu-button_text">MENÚ</p>
           </li>
           <li class="switch-container-principal">
             <ul class="switch-container">
@@ -88,71 +75,87 @@
       </nav>
     </header>
     <div class="global-render">
-      <section class="global-section render">
-        <div class="avatar-container">
-          <div class="avatar-section">
-            <img class="avatar-img" src="./assets/me_web.png" alt="avatar" />
+      <div class="section-1">
+        <section class="global-section">
+          <div class="avatar-container">
+            <div class="avatar-section">
+              <img class="avatar-img" src="./assets/me_web.png" alt="avatar" />
+            </div>
           </div>
-        </div>
-        <section class="text-section">
-          <section class="introuccig-section">
-            <p class="text-hi">Hola...</p>
-            <h1 class="text-title">
-              soy <span class="marker-title">Rafael Barrientos</span>
-            </h1>
-            <div class="wrapper">
-              <div data-text></div>
-              <span class="item">Diseñador UI & UX</span>
-              <span class="item">Diseñador Web</span>
-              <span class="item">Desarrollador Full Stack</span>
-              <span class="item">Desarrollador IoT</span>
+          <section class="text-section">
+            <section class="introuccig-section">
+              <p class="text-hi">Hola...</p>
+              <h1 class="text-title">
+                soy <span class="marker-title">Rafael Barrientos</span>
+              </h1>
+              <div class="wrapper">
+                <div data-text></div>
+                <span class="item">Diseñador UI & UX</span>
+                <span class="item">Diseñador Web</span>
+                <span class="item">Desarrollador Full Stack</span>
+                <span class="item">Desarrollador IoT</span>
+              </div>
+            </section>
+            <section class="returns-section">
+              <p class="text-simple">
+                Al puro estilo de los Cardenales de Nuevo León y al mismo tiempo
+                al de AC/DC. Orgullosamente del Estado de Hidalgo radicando en
+                el Estado de Querétaro.
+              </p>
+            </section>
+            <div class="social-container">
+              <a
+                href="https://www.linkedin.com/in/rafael-barrientos-garcia-9934b3244/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin social"></i>
+              </a>
+              <a href="https://github.com/rafa-wine" target="_blank">
+                <i class="fa-brands fa-github social"></i>
+              </a>
+              <p>Descarga mi</p>
+              <a
+                href="../resources/rafiprogramando_cv.pdf"
+                download="rafiprogramando_cv"
+                class="cv-button"
+              >
+                <p class="text-cv">CV</p>
+                <i class="fa-solid fa-download"> </i>
+              </a>
             </div>
           </section>
-          <section class="returns-section">
-            <p class="text-simple">
-              Al puro estilo de los Cardenales de Nuevo León y al mismo tiempo
-              al de AC/DC. Orgullosamente del Estado de Hidalgo radicando en el
-              Estado de Querétaro.
-            </p>
-          </section>
-          <div class="social-container">
-            <a
-              href="https://www.linkedin.com/in/rafael-barrientos-garcia-9934b3244/"
-              target="_blank"
-            >
-              <i class="fa-brands fa-linkedin social"></i>
-            </a>
-            <a href="https://github.com/rafa-wine" target="_blank">
-              <i class="fa-brands fa-github social"></i>
-            </a>
-            <p>Descarga mi</p>
-            <a
-              href="../resources/rafiprogramando_cv.pdf"
-              download="rafiprogramando_cv"
-              class="cv-button"
-            >
-              <p class="text-cv">CV</p>
-              <i class="fa-solid fa-download"> </i>
-            </a>
-          </div>
         </section>
-      </section>
-      <!-- <div class="about-me-container format-subviews">
-        <span class="loader"></span>
-        <p>.sobre_mí().build()</p>
       </div>
-      <div class="history-container format-subviews">
-        <span class="loader"></span>
-        <p>.historia().build()</p>
-      </div>
-      <div class="projects-container format-subviews">
-        <span class="loader"></span>
-        <p>.proyectos().build()</p>
-      </div>
-      <div class="contact-container format-subviews">
-        <span class="loader"></span>
-        <p>.contáctame().build()</p>
-      </div> -->
+    </div>
+    <div class="loader-container">
+      <span class="loader-2"></span>
+    </div>
+    <div class="menu-content">
+      <ul>
+        <li onclick="menuBehavior()" class="close-button">
+          CERRAR MENÚ</i>
+        </li>
+        <li class="nav-item">
+          <a href="./views/about.html">
+            <p class="switch-frame about-me link-to">.sobre_mí()</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./views/history.html">
+            <p class="switch-frame link-to">.historia()</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./views/projects.html">
+            <p class="switch-frame link-to">.proyectos()</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./views/contact.html">
+            <p class="switch-frame link-to">.contáctame()</p>
+          </a>
+        </li>
+      </ul>
     </div>
   </body>
 </html>

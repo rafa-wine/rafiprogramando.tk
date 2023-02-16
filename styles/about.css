@@ -1,16 +1,20 @@
 .global-render {
-  display: flex;
+  display: none;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   margin: 60px 0px;
+  align-items: center;
+}
+
+.section-1 {
+  width: 100%;
+  max-width: 1290px;
 }
 
 .about-view {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 90%;
   gap: 30px;
 }
 
@@ -18,7 +22,15 @@
   justify-content: start;
 }
 
+.presentation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .intro-text {
+  display: flex;
+  width: 60%;
   font-size: 18px;
   color: var(--terminal-success);
 }
@@ -68,5 +80,14 @@ ul {
 
   .social-container {
     justify-content: center;
+  }
+
+  .presentation-container {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .intro-text {
+    width: 100%;
   }
 }

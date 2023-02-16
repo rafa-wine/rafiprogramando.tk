@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rafi.contáctame()</title>
+    <title>rafi.contáctame</title>
     <link rel="icon" href="../assets/bee.png" type="image/x-icon" />
     <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/loader.css" />
     <script
       src="../scripts/script.js"
       type="application/javascript"
@@ -46,6 +47,9 @@
               </li>
             </ul>
           </li>
+          <li class="menu-button-container" onclick="menuBehavior()">
+            <p class="menu-button_text">MENÚ</p>
+          </li>
           <li class="switch-container-principal">
             <ul class="switch-container">
               <li>
@@ -63,14 +67,43 @@
           </li>
         </ul>
       </nav>
-      <div class="global-render">
-        <div class="global-section render>
-          <div class="history-container format-subviews">
-              <span class="loader"></span>
-              <p>.contáctame().build()</p>
-            </div>
+    </header>
+    <div class="global-render">
+      <div class="global-section render">
+        <div class="history-container format-subviews">
+          <span class="loader"></span>
+          <p>.contáctame().build()</p>
         </div>
       </div>
-    </header>
+    </div>
+    <div class="loader-container">
+      <span class="loader-2"></span>
+    </div>
+    <div class="menu-content">
+      <ul>
+        <li onclick="menuBehavior()" class="close-button">
+          CERRAR MENÚ</i>
+        </li>
+        <li class="nav-item">
+          <a href="./about.html">
+            <p class="switch-frame about-me link-to">.sobre_mí()</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./history.html">
+            <p class="switch-frame link-to">.historia()</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./projects.html">
+            <p class="switch-frame link-to">.proyectos()</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./contact.html">
+            <p class="switch-frame link-to">.contáctame()</p>
+          </a>
+        </li>
+      </ul>
   </body>
 </html>

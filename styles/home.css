@@ -33,9 +33,9 @@ body {
 /* Start Navigation Bar */
 
 header {
-  display: center;
+  display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
   height: 70px;
 }
@@ -53,22 +53,25 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 1290px;
   height: 100%;
 }
 
 .navigation-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 0px 70px;
+  gap: 5px;
 }
 
 .links-container {
-  width: 50%;
+  width: 40%;
 }
 
 .switch-container-principal {
+  display: flex;
+  justify-content: end;
   width: 25%;
 }
 
@@ -93,17 +96,27 @@ nav ul {
   color: var(--accent-color);
 }
 
-.logo-container > a {
-  font-family: "Hardino", sans-serif;
-  font-size: 26px;
+.menu-button-container {
+  display: none;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
   width: 25%;
 }
 
-.home-button {
+.logo-container > a {
+  display: flex;
+  align-items: center;
   cursor: default;
+  width: 100%;
+  font-family: "Hardino", sans-serif;
+  font-size: 24px;
 }
 
-.home-button:hover > span {
+.logo-container > a:hover > span {
   transition: 0.3s;
   color: var(--accent-color);
 }
@@ -119,7 +132,7 @@ nav ul {
 
 .switch-frame {
   font-family: "JackInput", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* Start Swicth theme */
@@ -169,13 +182,25 @@ nav ul {
 
 /* End Navigation Bar */
 
+.global-render {
+  display: none;
+  width: 100%;
+  justify-content: center;
+}
+
 .global-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: fit-content;
   margin-top: 60px;
+  max-width: 1290px;
+}
+
+.section-1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .text-section {
@@ -287,28 +312,13 @@ nav ul {
 
 /* Start Subviews style */
 
-.about-me-container {
-  display: none;
-}
-
-.history-container {
-  display: none;
-}
-
-.projects-container {
-  display: none;
-}
-
-.contact-container {
-  display: none;
-}
-
 .format-subviews {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: calc(100vh - 70px);
+  height: 400px;
 }
 
 .loader {
@@ -338,7 +348,44 @@ nav ul {
 
 /* End Subviews style */
 
+.menu-content {
+  transition: 0.5s linear;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  opacity: 0.9;
+}
+
+.menu-content_open {
+  transition: 0.5s linear;
+  left: 0%;
+}
+
 /* ------------- Media queries ------------------------ */
+
+@media (max-width: 1150px) {
+  .navigation-list {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 25px;
+  }
+
+  .links-container {
+    width: 50%;
+  }
+
+  .switch-container-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    margin-top: 25px;
+  }
+}
 
 @media (max-width: 900px) {
   header {
@@ -347,21 +394,58 @@ nav ul {
   }
 
   .navigation-list {
-    flex-direction: column;
+    margin-top: 0;
+    gap: 0;
   }
 
   .navigation-links {
     display: none;
+  }
+
+  .menu-button-container {
+    display: flex;
+    position: fixed;
+    top: 70px;
+    left: calc(100% - 30px);
+    background-color: var(--brown-color);
+    width: 30px;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .menu-button_text {
+    font-size: 18px;
+    color: var(--secondary-color);
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    padding: 5px 0;
+  }
+
+  .menu-content > ul {
+    display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .menu-content > ul > li > a > p {
+    font-size: 18px;
   }
 
   .logo-container {
     width: 100%;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
-  .switch-container {
-    margin-top: 25px;
+  .logo-container > a {
+    justify-content: center;
+  }
+
+  .switch-container-principal {
+    width: 100%;
   }
 
   .global-section {

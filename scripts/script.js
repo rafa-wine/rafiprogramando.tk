@@ -1,3 +1,13 @@
+/* --------------- Loader ------------------------------ */
+window.addEventListener("load", (event) => {
+  if (event.isTrusted) {
+    document.getElementsByClassName("loader-container")[0].style.display =
+      "none";
+    document.getElementsByClassName("global-render")[0].style.display = "flex";
+  }
+});
+/* --------------- End Loader ------------------------------ */
+
 /* ----------------- Current Theme ----------------------*/
 var isActive = false;
 
@@ -26,13 +36,6 @@ async function initTheme() {
 }
 
 initTheme();
-
-/* element = document.getElementsByClassName("switch")[0];
-if (localStorage.getItem("theme") === "dark") {
-  isActive = false;
-  changeTheme(element);
-} */
-
 /* ----------------- End Current Theme ----------------------*/
 
 const dimensions = () => {
@@ -62,3 +65,11 @@ function aboutMe(show, hide1, hide2, hide3, hide4) {
 
   document.getElementsByClassName(show)[0].style.display = "flex";
 }
+
+/* -------------------------------------------------------------------------- */
+
+const menuBehavior = () => {
+  document
+    .getElementsByClassName("menu-content")[0]
+    .classList.toggle("menu-content_open");
+};
