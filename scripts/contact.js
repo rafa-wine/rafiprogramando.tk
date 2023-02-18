@@ -102,7 +102,7 @@ button.addEventListener("click", async () => {
       }
       notificationItem(
         notifier,
-        "!Datos guardados con éxito¡",
+        "¡Datos guardados con éxito!",
         "var(--terminal-success)"
       );
     }
