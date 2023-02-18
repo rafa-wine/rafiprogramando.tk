@@ -41,7 +41,7 @@
 }
 
 .text-history-block {
-  color: var(--brown-color);
+  color: var(--terminal-comments);
 }
 
 @media (max-width: 900px) {

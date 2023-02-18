@@ -16,6 +16,7 @@
   --secondary-color: #f2f2f2;
   --accent-color: #e5b427;
   --brown-color: #b27c32;
+  --terminal-comments: #7e7e7e;
 }
 
 * {
@@ -38,6 +39,11 @@ header {
   justify-content: center;
   width: 100%;
   height: 70px;
+}
+
+*::selection {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 ul {
@@ -242,7 +248,7 @@ nav ul {
 }
 
 .text-simple {
-  color: var(--brown-color);
+  color: var(--terminal-comments);
 }
 
 .social-container {
