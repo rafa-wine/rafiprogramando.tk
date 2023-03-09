@@ -147,11 +147,29 @@ nav ul {
   height: 100vh;
   background-color: var(--primary-color);
   opacity: 0.9;
+  z-index: 100;
 }
 
 .menu-content_open {
   transition: 0.5s linear;
   left: 0%;
+}
+
+.close-button {
+  position: absolute;
+  top: 125px;
+  right: 35px;
+  width: 35px;
+  height: 35px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 100%;
+  text-align: center;
+  background-color: var(--secondary-color);
+}
+
+.fa-xmark {
+  font-size: 35px;
+  color: var(--primary-color);
 }
 
 @media (max-width: 1150px) {
@@ -195,11 +213,21 @@ nav ul {
   .menu-button-container {
     display: flex;
     position: fixed;
-    top: 70px;
-    left: calc(100% - 30px);
-    background-color: var(--brown-color);
-    width: 30px;
-    border-radius: 8px 0 0 8px;
+    top: 125px;
+    right: 35px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+  }
+
+  .fa-bars {
+    font-size: 28px;
+    color: var(--primary-color);
   }
 
   .menu-button_text {

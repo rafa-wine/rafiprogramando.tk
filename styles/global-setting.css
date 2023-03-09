@@ -3,41 +3,20 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 
 :root {
-  --primary-color: #f2f2f2;
-  --primary-color: #e6e6e6;
-
+  --primary-color: #f2f6fc;
   --secondary-color: #1c1d1f;
-  --accent-color: #daa300;
-
-  --accent-color: #6193f2;
-  --accent-color: #e6acf1;
-  --accent-color: #f994cf;
-  --accent-color: #fc4f13;
   --accent-color: #378b74;
-
-  --terminal-success: #02be3b;
-
   --terminal-success: #4c9f8b;
-
   --terminal-comments: #5a5a5a;
-  --brown-color: #b16a08;
-
   --brown-color: #793e00;
 }
 
 .dark-theme {
   --primary-color: #1c1d1f;
-  --secondary-color: #f2f2f2;
-  --accent-color: #e5b427;
-
-  --accent-color: #f994cf;
-  --accent-color: #e6acf1;
+  --secondary-color: #f2f6fc;
   --accent-color: #6ab39f;
-
   --terminal-success: #93c6b7;
-
   --brown-color: #b27c32;
-
   --terminal-comments: #7e7e7e;
 }
 

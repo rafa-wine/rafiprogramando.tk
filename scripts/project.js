@@ -37,6 +37,8 @@ querySnapshot.forEach((doc) => {
 
   document.getElementsByClassName("image-project")[0].src = doc.data().banner;
   document.getElementsByClassName("title-view")[0].innerHTML = doc.data().title;
+  document.getElementsByClassName("text-description-view")[0].innerHTML =
+    "/* " + doc.data().description + " */";
 
   technologies.forEach((item) => {
     try {
