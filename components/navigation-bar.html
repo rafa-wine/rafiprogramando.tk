@@ -1,0 +1,79 @@
+<nav class="navigation-bar-container">
+  <ul class="navigation-list">
+    <li class="logo-container">
+      <a href="../index.html">
+        rafi<span class="logo-colorize">.programando()</span>
+      </a>
+    </li>
+    <li class="links-container">
+      <ul class="navigation-links">
+        <li class="nav-item">
+          <a href="../views/about.html">
+            <p class="switch-frame about-me link-to">.sobre_mí()</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../views/history.html">
+            <p class="switch-frame history link-to">.historia()</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../views/projects.html">
+            <p class="switch-frame projects link-to">.proyectos()</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../views/contact.html">
+            <p class="switch-frame contact link-to">.contáctame()</p>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="menu-button-container" onclick="menuBehavior()">
+      <p class="menu-button_text">MENÚ</p>
+    </li>
+    <li class="menu-content">
+      <ul>
+        <li onclick="menuBehavior()" class="close-button">
+          <i>CERRAR MENÚ</i>
+        </li>
+        <li class="nav-item">
+          <a href="../views/about.html">
+            <p class="switch-frame link-to">.sobre_mí()</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../views/history.html">
+            <p class="switch-frame link-to">.historia()</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../views/projects.html">
+            <p class="switch-frame link-to">.proyectos()</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../views/contact.html">
+            <p class="switch-frame link-to">.contáctame()</p>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="switch-container-principal">
+      <ul class="switch-container">
+        <li>
+          <p class="switch-text">.light()</p>
+        </li>
+        <li>
+          <div id="hi" class="theme-switch">
+            <div class="switch" onclick="changeTheme(this)"></div>
+          </div>
+        </li>
+        <li>
+          <p class="switch-text">.dark()</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<script src="../scripts/script.js" type="application/javascript" defer></script>

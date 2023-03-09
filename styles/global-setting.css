@@ -1,0 +1,123 @@
+@import url("https://fonts.cdnfonts.com/css/hardino");
+@import url("https://fonts.cdnfonts.com/css/jack-input");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+
+:root {
+  --primary-color: #f2f2f2;
+  --primary-color: #e6e6e6;
+
+  --secondary-color: #1c1d1f;
+  --accent-color: #daa300;
+
+  --accent-color: #6193f2;
+  --accent-color: #e6acf1;
+  --accent-color: #f994cf;
+  --accent-color: #fc4f13;
+  --accent-color: #378b74;
+
+  --terminal-success: #02be3b;
+
+  --terminal-success: #4c9f8b;
+
+  --terminal-comments: #5a5a5a;
+  --brown-color: #b16a08;
+
+  --brown-color: #793e00;
+}
+
+.dark-theme {
+  --primary-color: #1c1d1f;
+  --secondary-color: #f2f2f2;
+  --accent-color: #e5b427;
+
+  --accent-color: #f994cf;
+  --accent-color: #e6acf1;
+  --accent-color: #6ab39f;
+
+  --terminal-success: #93c6b7;
+
+  --brown-color: #b27c32;
+
+  --terminal-comments: #7e7e7e;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "JackInput", sans-serif;
+  color: var(--secondary-color);
+}
+
+body {
+  transition: background-color 0.3s;
+  background-color: var(--primary-color);
+}
+
+/* Start Navigation Bar */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+}
+
+*::selection {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.global-render {
+  display: none;
+  width: 100%;
+  justify-content: center;
+}
+
+.views {
+  display: flex;
+  flex-direction: column;
+  width: clamp(0px, 100%, 1290px);
+  align-items: center;
+  margin: 70px 0px;
+  gap: 25px;
+}
+
+.blocks-view {
+  width: 90%;
+}
+
+/* --> Components ---------------------------------------------------------- */
+
+.title-view {
+  font-family: "Hardino", sans-serif;
+  font-size: 24px;
+  color: var(--brown-color);
+}
+
+.subtitles-view {
+  font-family: "Hardino", sans-serif;
+  width: 100%;
+  font-size: 18px;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.text-description-view {
+  font-size: 20px;
+  color: var(--terminal-comments);
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}

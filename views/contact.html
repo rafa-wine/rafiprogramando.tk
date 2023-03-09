@@ -6,302 +6,194 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>rafi.contáctame</title>
     <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../styles/home.css" />
+
+    <link rel="stylesheet" href="../styles/global-setting.css" />
+    <link rel="stylesheet" href="../styles/navigation-bar.css" />
+    <link rel="stylesheet" href="../styles/direct-contact.css" />
+
     <link rel="stylesheet" href="../styles/contact.css" />
     <link rel="stylesheet" href="../styles/loader.css" />
+
     <script
-      src="../scripts/script.js"
+      src="../scripts/RenderComponents.js"
+      type="application/javascript"
+      defer
+    ></script>
+    <script
+      src="../scripts/NavbarBehavior.js"
       type="application/javascript"
       defer
     ></script>
     <script src="../scripts/contact.js" type="module" defer></script>
   </head>
   <body>
-    <header>
-      <nav class="navigation-bar">
-        <ul class="navigation-list">
-          <li class="logo-container">
-            <a href="../index.html" class="home-button">
-              rafi<span class="logo-colorize">.programando()</span>
-            </a>
-          </li>
-          <li class="links-container">
-            <ul class="navigation-links">
-              <li class="nav-item">
-                <a href="./about.html">
-                  <p class="switch-frame about-me link-to">.sobre_mí()</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./history.html">
-                  <p class="switch-frame link-to">.historia()</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./projects.html">
-                  <p class="switch-frame link-to">.proyectos()</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./contact.html">
-                  <p class="switch-frame selected">.contáctame()</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="menu-button-container" onclick="menuBehavior()">
-            <p class="menu-button_text">MENÚ</p>
-          </li>
-          <li class="switch-container-principal">
-            <ul class="switch-container">
-              <li>
-                <p class="switch-text">.light()</p>
-              </li>
-              <li>
-                <div id="hi" class="theme-switch">
-                  <div class="switch" onclick="changeTheme(this)"></div>
-                </div>
-              </li>
-              <li>
-                <p class="switch-text">.dark()</p>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <header class="navigation-bar"></header>
     <div class="global-render">
-      <div class="global-section">
-        <div class="contact-view">
-          <div class="social-container">
-            <a
-              href="https://www.linkedin.com/in/rafael-barrientos-garcia-9934b3244/"
-              target="_blank"
-            >
-              <i class="fa-brands fa-linkedin social"></i>
-            </a>
-            <a href="https://github.com/rafa-wine" target="_blank">
-              <i class="fa-brands fa-github social"></i>
-            </a>
-            <p>Descarga mi</p>
-            <a
-              href="./resources/rafiprogramando_cv.pdf"
-              download="rafiprogramando_cv"
-              class="cv-button"
-            >
-              <p class="text-cv">CV</p>
-              <i class="fa-solid fa-download"> </i>
-            </a>
-          </div>
-          <div class="text-presentation">
-            <p class="text-title">Ponte en contacto y di Hola.</p>
-            <p class="text-subtitle">
-              /* ¡Estoy emocionado de asumir su nuevo proyecto y ayudarlo a
-              construir algo increíble! */
-            </p>
-          </div>
-          <div class="contact-container">
-            <div class="contact-sections">
-              <form action="#" method="post">
-                <div class="item-form">
-                  <p>estoy interesado en:</p>
-                </div>
-                <div class="item-form">
-                  <div class="radio">
-                    <input
-                      type="radio"
-                      name="reason"
-                      id="web"
-                      value="Web"
-                      class="radio-item"
-                    />
-                    <label for="web" class="radio-label"
-                      >/* Una página web */</label
-                    >
-                  </div>
-                  <div class="radio">
-                    <input
-                      type="radio"
-                      name="reason"
-                      id="movil"
-                      value="Móvil"
-                      class="radio-item"
-                    />
-                    <label for="movil" class="radio-label"
-                      >/* Una aplicación móvil */</label
-                    >
-                  </div>
-                  <div class="radio">
-                    <input
-                      type="radio"
-                      name="reason"
-                      id="revision"
-                      value="Revisión"
-                      class="radio-item"
-                    />
-                    <label for="revision" class="radio-label"
-                      >/* Una revisión completa de mi sitio web */</label
-                    >
-                  </div>
-                  <div class="radio">
-                    <input
-                      type="radio"
-                      name="reason"
-                      id="iot"
-                      value="IoT"
-                      class="radio-item"
-                    />
-                    <label for="iot" class="radio-label"
-                      >/* Comenzar un proyecto IoT de automatización */</label
-                    >
-                  </div>
-                  <div class="radio">
-                    <input
-                      type="radio"
-                      name="reason"
-                      id="diseño"
-                      value="Diseño"
-                      class="radio-item"
-                    />
-                    <label for="diseño" class="radio-label"
-                      >/* Diseño de página web o logotipos */</label
-                    >
-                  </div>
-                  <div class="radio">
-                    <input
-                      type="radio"
-                      name="reason"
-                      id="servicio"
-                      value="Servicio"
-                      class="radio-item"
-                    />
-                    <label for="servicio" class="radio-label"
-                      >/* Un servicio específico */</label
-                    >
-                  </div>
-                </div>
-                <div class="item-form inputs-container">
-                  <div>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="//nombre"
-                    />
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="//correo"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      id="phone"
-                      name="phone"
-                      placeholder="//telefono"
-                    />
-                    <input
-                      type="text"
-                      id="country"
-                      name="country"
-                      placeholder="//ciudad"
-                    />
-                  </div>
-                </div>
-                <div class="button-check-container">
-                  <button type="button">Enviar</button>
-                  <div class="empty-fields">
-                    <p class="error-fields-text"></p>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="contact-sections">
-              <div class="item-contact">
-                <p>contactame:</p>
-                <a href="mailto:rafiprogramando@gmail.com"
-                  ><i class="fa-solid fa-envelope"></i>
-                  <p>// rafiprogramando@gmail.com</p></a
-                >
-                <a href="tel:+527731278383"
-                  ><i class="fa-solid fa-phone"></i>
-                  <p>// (+52) 773 127 8383</p></a
-                >
+      <div class="views">
+        <div class="direct-contact blocks-view"></div>
+        <div class="text-presentation blocks-view">
+          <h1 class="title-view">Ponte en contacto y di Hola.</h1>
+          <h3 class="text-description-view">
+            /* ¡Estoy emocionado de asumir su nuevo proyecto y ayudarlo a
+            construir algo increíble! */
+          </h3>
+        </div>
+        <div class="contact-container blocks-view">
+          <div class="contact-sections">
+            <form action="#" method="post">
+              <div class="item-form">
+                <h4 class="subtitles-view">estoy interesado en:</h4>
               </div>
-              <div class="item-contact">
-                <p>sigueme en:</p>
-                <a
-                  href="https://www.facebook.com/rafael.barrientosgracia"
-                  target="_blank"
-                  ><i class="fa-brands fa-facebook"></i>
-                  <p>// Facebook</p></a
-                >
-                <a href="https://www.instagram.com/rafa_wine/" target="_blank"
-                  ><i class="fa-brands fa-instagram"></i>
-                  <p>// Instagram</p></a
-                >
-                <a
-                  href="https://www.linkedin.com/in/rafael-barrientos-garcia-9934b3244/"
-                  target="_blank"
-                  ><i class="fa-brands fa-linkedin"></i>
-                  <p>// Linkedin</p></a
-                >
+              <div class="item-form">
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="reason"
+                    id="web"
+                    value="Web"
+                    class="radio-item"
+                  />
+                  <label for="web" class="radio-label"
+                    >/* Una página web */</label
+                  >
+                </div>
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="reason"
+                    id="movil"
+                    value="Móvil"
+                    class="radio-item"
+                  />
+                  <label for="movil" class="radio-label"
+                    >/* Una aplicación móvil */</label
+                  >
+                </div>
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="reason"
+                    id="revision"
+                    value="Revisión"
+                    class="radio-item"
+                  />
+                  <label for="revision" class="radio-label"
+                    >/* Una revisión completa de mi sitio web */</label
+                  >
+                </div>
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="reason"
+                    id="iot"
+                    value="IoT"
+                    class="radio-item"
+                  />
+                  <label for="iot" class="radio-label"
+                    >/* Comenzar un proyecto IoT de automatización */</label
+                  >
+                </div>
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="reason"
+                    id="diseño"
+                    value="Diseño"
+                    class="radio-item"
+                  />
+                  <label for="diseño" class="radio-label"
+                    >/* Diseño de página web o logotipos */</label
+                  >
+                </div>
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="reason"
+                    id="servicio"
+                    value="Servicio"
+                    class="radio-item"
+                  />
+                  <label for="servicio" class="radio-label"
+                    >/* Un servicio específico */</label
+                  >
+                </div>
               </div>
-            </div>
+              <div class="item-form inputs-container">
+                <div>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="//nombre"
+                  />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="//correo"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    placeholder="//telefono"
+                  />
+                  <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    placeholder="//ciudad"
+                  />
+                </div>
+              </div>
+              <div class="button-check-container">
+                <button type="button">Enviar</button>
+                <div class="empty-fields">
+                  <p class="error-fields-text"></p>
+                </div>
+              </div>
+            </form>
           </div>
-          <div class="social-container">
-            <a
-              href="https://www.linkedin.com/in/rafael-barrientos-garcia-9934b3244/"
-              target="_blank"
-            >
-              <i class="fa-brands fa-linkedin social"></i>
-            </a>
-            <a href="https://github.com/rafa-wine" target="_blank">
-              <i class="fa-brands fa-github social"></i>
-            </a>
-            <p>Descarga mi</p>
-            <a
-              href="./resources/rafiprogramando_cv.pdf"
-              download="rafiprogramando_cv"
-              class="cv-button"
-            >
-              <p class="text-cv">CV</p>
-              <i class="fa-solid fa-download"> </i>
-            </a>
+          <div class="contact-sections">
+            <div class="item-contact">
+              <h4 class="subtitles-view">contactame:</h4>
+              <a href="mailto:rafiprogramando@gmail.com"
+                ><i class="fa-solid fa-envelope"></i>
+                <p>// rafiprogramando@gmail.com</p></a
+              >
+              <a href="tel:+527731278383"
+                ><i class="fa-solid fa-phone"></i>
+                <p>// (+52) 773 127 8383</p></a
+              >
+            </div>
+            <div class="item-contact">
+              <h4 class="subtitles-view">sigueme en:</h4>
+              <a
+                href="https://www.facebook.com/rafael.barrientosgracia"
+                target="_blank"
+                ><i class="fa-brands fa-facebook"></i>
+                <p>// Facebook</p></a
+              >
+              <a href="https://www.instagram.com/rafa_wine/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i>
+                <p>// Instagram</p></a
+              >
+              <a
+                href="https://www.linkedin.com/in/rafael-barrientos-garcia-9934b3244/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin"></i>
+                <p>// Linkedin</p></a
+              >
+            </div>
           </div>
         </div>
-        <div id="cards"></div>
+        <div class="direct-contact blocks-view"></div>
       </div>
     </div>
-    <div class="loader-container">
-      <span class="loader-2"></span>
-    </div>
-    <div class="menu-content">
-      <ul>
-        <li onclick="menuBehavior()" class="close-button">CERRAR MENÚ</li>
-        <li class="nav-item">
-          <a href="./about.html">
-            <p class="switch-frame about-me link-to">.sobre_mí()</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="./history.html">
-            <p class="switch-frame link-to">.historia()</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="./projects.html">
-            <p class="switch-frame link-to">.proyectos()</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="./contact.html">
-            <p class="switch-frame link-to">.contáctame()</p>
-          </a>
-        </li>
-      </ul>
+    <div class="loader">
+      <span class="loader-item"></span>
     </div>
   </body>
 </html>

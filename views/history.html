@@ -6,316 +6,212 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>rafi.historia</title>
     <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../styles/home.css" />
+
+    <link rel="stylesheet" href="../styles/global-setting.css" />
+    <link rel="stylesheet" href="../styles/navigation-bar.css" />
+    <link rel="stylesheet" href="../styles/direct-contact.css" />
+
     <link rel="stylesheet" href="../styles/history.css" />
     <link rel="stylesheet" href="../styles/loader.css" />
+
     <script
-      src="../scripts/script.js"
+      src="../scripts/RenderComponents.js"
+      type="application/javascript"
+      defer
+    ></script>
+    <script
+      src="../scripts/NavbarBehavior.js"
       type="application/javascript"
       defer
     ></script>
   </head>
   <body>
-    <header>
-      <nav class="navigation-bar">
-        <ul class="navigation-list">
-          <li class="logo-container">
-            <a href="../index.html" class="home-button">
-              rafi<span class="logo-colorize">.programando()</span>
-            </a>
-          </li>
-          <li class="links-container">
-            <ul class="navigation-links">
-              <li class="nav-item">
-                <a href="./about.html">
-                  <p class="switch-frame about-me link-to">.sobre_mí()</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./history.html">
-                  <p class="switch-frame selected">.historia()</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./projects.html">
-                  <p class="switch-frame link-to">.proyectos()</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./contact.html">
-                  <p class="switch-frame link-to">.contáctame()</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="menu-button-container" onclick="menuBehavior()">
-            <p class="menu-button_text">MENÚ</p>
-          </li>
-          <li class="switch-container-principal">
-            <ul class="switch-container">
-              <li>
-                <p class="switch-text">.light()</p>
-              </li>
-              <li>
-                <div id="hi" class="theme-switch">
-                  <div class="switch" onclick="changeTheme(this)"></div>
-                </div>
-              </li>
-              <li>
-                <p class="switch-text">.dark()</p>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <header class="navigation-bar"></header>
     <div class="global-render">
-      <div class="global-section">
-        <div class="history-container">
-          <div class="social-container">
-            <a
-              href="https://www.linkedin.com/in/rafael-barrientos-garcia-9934b3244/"
-              target="_blank"
-            >
-              <i class="fa-brands fa-linkedin social"></i>
-            </a>
-            <a href="https://github.com/rafa-wine" target="_blank">
-              <i class="fa-brands fa-github social"></i>
-            </a>
-            <p>Descarga mi</p>
-            <a
-              href="./resources/rafiprogramando_cv.pdf"
-              download="rafiprogramando_cv"
-              class="cv-button"
-            >
-              <p class="text-cv">CV</p>
-              <i class="fa-solid fa-download"> </i>
-            </a>
+      <div class="views">
+        <div class="direct-contact blocks-view"></div>
+        <div class="text-presentation blocks-view">
+          <h1 class="title-view">Había una vez en no muy lejano...</h1>
+          <h3 class="text-description-view">
+            /* Conoce un poco de mi historia. */
+          </h3>
+        </div>
+        <div class="history-block blocks-view">
+          <div class="img-container">
+            <img
+              src="../assets/chart.png"
+              alt="estadisticas"
+              class="image-history-block"
+            />
           </div>
-          <div class="history-block">
-            <div class="img-container">
-              <img
-                src="../assets/chart.png"
-                alt="estadisticas"
-                class="image-history-block"
-              />
-            </div>
-            <div class="text-container">
-              <p class="text-history-block">
-                /* Inicia el año 2000, un año bastante prometedor, o eso parecía
-                hasta un día después de haber iniciado. Nace un niño nada
-                peculiar y sobre todo muy raro, así es, estoy hablando de
-                Juanito, niño que con el que comparto el día de nacimiento y
-                hospital. */
-              </p>
-            </div>
-          </div>
-          <div class="history-block history-block_reverse">
-            <div class="img-container">
-              <img
-                src="../assets/doctor.png"
-                alt="doctor"
-                class="image-history-block"
-              />
-            </div>
-            <div class="text-container">
-              <p class="text-history-block">
-                /* Desde el primer momento en que el doctor vio mi rostro supo que
-                era un niño bastante común y corriente, pues sí, ni que el
-                doctor viera el futuro, sin embargo, la madre sí que se dio
-                cuenta de que este niño iba a ser un dolor de cabeza. */
-              </p>
-            </div>
-          </div>
-          <div class="history-block">
-            <div class="img-container">
-              <img
-                src="../assets/boxChild.png"
-                alt="niño en caja"
-                class="image-history-block"
-              />
-            </div>
-            <div class="text-container">
-              <p class="text-history-block">
-                /* El niño empezó a crecer y como cualquier niño empezó a decir sus
-                primeras palabras, y sí, sorprendente, sus primeras palabras
-                fueron “ma” y “pa”. ¿Qué?, ¿pensaron que mis primeras palabras
-                habían sido “cero” y “uno”?. La verdad es que ni siquiera yo sé
-                cuáles fueron mis primeras palabras, ni mis padres se acuerdan,
-                no lo sé, tal vez fue “nopal”, había bastantes en ese tiempo en
-                el pueblo. */
-              </p>
-            </div>
-          </div>
-          <div class="history-block history-block_reverse">
-            <div class="img-container">
-              <img
-                src="../assets/preescolar.png"
-                alt="preescolar"
-                class="image-history-block"
-              />
-            </div>
-            <div class="text-container">
-              <p class="text-history-block">
-                /* Empiezo a educarme, por lo cual asisto al preescolar que cumple
-                con todos los requisitos para brindar una buena educación,
-                profesores amables, pero horribles y en sobrepeso, inmobiliario
-                adecuado e infraestructura firme construida sobre la mitad de un
-                cementerio, y lo más importante, había columpios. */
-              </p>
-            </div>
-          </div>
-          <div class="history-block">
-            <div class="img-container">
-              <img
-                src="../assets/primaria.png"
-                alt="primaria"
-                class="image-history-block"
-              />
-            </div>
-            <div class="text-container">
-              <p class="text-history-block">
-                /* Ni siquiera un año fue suficiente para hartar a los profesores
-                del preescolar y así enviarme a la primaria donde aprendí muchas
-                cosas, por ejemplo a copiar, a no, eso lo aprendí en el
-                preescolar, bueno, varias cosas. Hice bastantes amigos y por
-                primera vez me le declaré a una chica, descubrí una pasión por
-                la tecnología y empezaba a investigar al respecto, me volví
-                adicto a los videojuegos, entré a la banda de guerra, equipo de
-                futbol, basquetbol y voleibol, también descubrí que era bueno en
-                matemáticas y el ajedrez. */
-              </p>
-            </div>
-          </div>
-          <div class="history-block history-block_reverse">
-            <div class="img-container">
-              <img src="../assets/3d.png" alt="" class="image-history-block" />
-            </div>
-            <div class="text-container">
-              <p class="text-history-block">
-                /* Entre a la secundaria, que fue más de lo mismo que en la
-                primaria, mismos amigos y diferentes profesores, seguía
-                practicando la guitarra y empezaba a componer y escribir
-                canciones. También fue una época bastante importante, empezaba a
-                interesarme en el negocio familiar, bueno, en realidad me
-                obligaban a trabajar en el negocio familiar, el cual es un
-                taller de alfarería, donde empecé a elaborar mis propias piezas
-                y me enseñaban las bases y técnicas para elaboración de piezas
-                de barro. */
-              </p>
-            </div>
-          </div>
-          <div class="history-block">
-            <div class="img-container">
-              <img
-                src="../assets/preparatoria.png"
-                alt="preparatoria"
-                class="image-history-block"
-              />
-            </div>
-            <div class="text-container">
-              <p class="text-history-block">
-                /* Llega el momento de salir más allá de los límites de mi pueblo,
-                la época de la preparatoria, donde por tradición familiar es
-                común que los envíen a una preparatoria técnica en otro
-                municipio. Allí conocí muchas personas, y por primera vez me
-                enfrentaba a una toma de decisión bastante importante, elegir
-                qué carrera técnica seguir, no dude bastante y elegí la de
-                Programador. Escribí mi primer hola mundo en Java y la cosa se
-                empezó a descontrolar, la prepa. */
-              </p>
-            </div>
-          </div>
-          <div class="history-block history-block_reverse">
-            <div class="img-container">
-              <img
-                src="../assets/universidad.png"
-                alt="universidad"
-                class="image-history-block"
-              />
-            </div>
-            <div class="text-container">
-              <p class="text-history-block">
-                /* Los días pasan y sin darme cuenta me encuentro en mi habitación
-                de foráneo, preparándome física y psicológicamente para asistir
-                a mi primer día de clases universitarias en la Licenciatura de
-                Ciencias Computacionales, una época bastante peculiar, dos años
-                que debí disfrutar al máximo, ya que la pandemia me obliga a
-                volver a mi pueblo y terminar esta etapa casi por completo en
-                línea, bastante triste, hice bastantes cosas, mejore como
-                desarrollador de software e invertir tiempo en el negocio
-                familiar, tuve algunas entrevistas explicando el proceso del
-                barro, elabore proyectos de programación entre otras cosas. */
-              </p>
-            </div>
-          </div>
-          <div class="history-block">
-            <div class="img-container">
-              <img
-                src="../assets/desarrollando.png"
-                alt="desarrollador"
-                class="image-history-block"
-              />
-            </div>
-            <div class="text-container">
-              <p class="text-history-block">
-                /* Ahora estoy bastante ocupado con mi titulación, aprendiendo
-                cosas nuevas y empezando de cero en la ciudad de Querétaro. */
-              </p>
-            </div>
-          </div>
-          <div class="social-container">
-            <a
-              href="https://www.linkedin.com/in/rafael-barrientos-garcia-9934b3244/"
-              target="_blank"
-            >
-              <i class="fa-brands fa-linkedin social"></i>
-            </a>
-            <a href="https://github.com/rafa-wine" target="_blank">
-              <i class="fa-brands fa-github social"></i>
-            </a>
-            <p>Descarga mi</p>
-            <a
-              href="./resources/rafiprogramando_cv.pdf"
-              download="rafiprogramando_cv"
-              class="cv-button"
-            >
-              <p class="text-cv">CV</p>
-              <i class="fa-solid fa-download"> </i>
-            </a>
+          <div class="text-container">
+            <p class="text-history-block">
+              /* Inicia el año 2000, un año bastante prometedor, o eso parecía
+              hasta un día después de haber iniciado. Nace un niño nada peculiar
+              y sobre todo muy raro, así es, estoy hablando de Juanito, niño que
+              con el que comparto el día de nacimiento y hospital. */
+            </p>
           </div>
         </div>
+        <div class="history-block history-block_reverse blocks-view">
+          <div class="img-container">
+            <img
+              src="../assets/doctor.png"
+              alt="doctor"
+              class="image-history-block"
+            />
+          </div>
+          <div class="text-container">
+            <p class="text-history-block">
+              /* Desde el primer momento en que el doctor vio mi rostro supo que
+              era un niño bastante común y corriente, pues sí, ni que el doctor
+              viera el futuro, sin embargo, la madre sí que se dio cuenta de que
+              este niño iba a ser un dolor de cabeza. */
+            </p>
+          </div>
+        </div>
+        <div class="history-block blocks-view">
+          <div class="img-container">
+            <img
+              src="../assets/boxChild.png"
+              alt="niño en caja"
+              class="image-history-block"
+            />
+          </div>
+          <div class="text-container">
+            <p class="text-history-block">
+              /* El niño empezó a crecer y como cualquier niño empezó a decir
+              sus primeras palabras, y sí, sorprendente, sus primeras palabras
+              fueron “ma” y “pa”. ¿Qué?, ¿pensaron que mis primeras palabras
+              habían sido “cero” y “uno”?. La verdad es que ni siquiera yo sé
+              cuáles fueron mis primeras palabras, ni mis padres se acuerdan, no
+              lo sé, tal vez fue “nopal”, había bastantes en ese tiempo en el
+              pueblo. */
+            </p>
+          </div>
+        </div>
+        <div class="history-block history-block_reverse blocks-view">
+          <div class="img-container">
+            <img
+              src="../assets/preescolar.png"
+              alt="preescolar"
+              class="image-history-block"
+            />
+          </div>
+          <div class="text-container">
+            <p class="text-history-block">
+              /* Empiezo a educarme, por lo cual asisto al preescolar que cumple
+              con todos los requisitos para brindar una buena educación,
+              profesores amables, pero horribles y en sobrepeso, inmobiliario
+              adecuado e infraestructura firme construida sobre la mitad de un
+              cementerio, y lo más importante, había columpios. */
+            </p>
+          </div>
+        </div>
+        <div class="history-block blocks-view">
+          <div class="img-container">
+            <img
+              src="../assets/primaria.png"
+              alt="primaria"
+              class="image-history-block"
+            />
+          </div>
+          <div class="text-container">
+            <p class="text-history-block">
+              /* Ni siquiera un año fue suficiente para hartar a los profesores
+              del preescolar y así enviarme a la primaria donde aprendí muchas
+              cosas, por ejemplo a copiar, a no, eso lo aprendí en el
+              preescolar, bueno, varias cosas. Hice bastantes amigos y por
+              primera vez me le declaré a una chica, descubrí una pasión por la
+              tecnología y empezaba a investigar al respecto, me volví adicto a
+              los videojuegos, entré a la banda de guerra, equipo de futbol,
+              basquetbol y voleibol, también descubrí que era bueno en
+              matemáticas y el ajedrez. */
+            </p>
+          </div>
+        </div>
+        <div class="history-block history-block_reverse blocks-view">
+          <div class="img-container">
+            <img src="../assets/3d.png" alt="" class="image-history-block" />
+          </div>
+          <div class="text-container">
+            <p class="text-history-block">
+              /* Entre a la secundaria, que fue más de lo mismo que en la
+              primaria, mismos amigos y diferentes profesores, seguía
+              practicando la guitarra y empezaba a componer y escribir
+              canciones. También fue una época bastante importante, empezaba a
+              interesarme en el negocio familiar, bueno, en realidad me
+              obligaban a trabajar en el negocio familiar, el cual es un taller
+              de alfarería, donde empecé a elaborar mis propias piezas y me
+              enseñaban las bases y técnicas para elaboración de piezas de
+              barro. */
+            </p>
+          </div>
+        </div>
+        <div class="history-block blocks-view">
+          <div class="img-container">
+            <img
+              src="../assets/preparatoria.png"
+              alt="preparatoria"
+              class="image-history-block"
+            />
+          </div>
+          <div class="text-container">
+            <p class="text-history-block">
+              /* Llega el momento de salir más allá de los límites de mi pueblo,
+              la época de la preparatoria, donde por tradición familiar es común
+              que los envíen a una preparatoria técnica en otro municipio. Allí
+              conocí muchas personas, y por primera vez me enfrentaba a una toma
+              de decisión bastante importante, elegir qué carrera técnica
+              seguir, no dude bastante y elegí la de Programador. Escribí mi
+              primer hola mundo en Java y la cosa se empezó a descontrolar, la
+              prepa. */
+            </p>
+          </div>
+        </div>
+        <div class="history-block history-block_reverse blocks-view">
+          <div class="img-container">
+            <img
+              src="../assets/universidad.png"
+              alt="universidad"
+              class="image-history-block"
+            />
+          </div>
+          <div class="text-container">
+            <p class="text-history-block">
+              /* Los días pasan y sin darme cuenta me encuentro en mi habitación
+              de foráneo, preparándome física y psicológicamente para asistir a
+              mi primer día de clases universitarias en la Licenciatura de
+              Ciencias Computacionales, una época bastante peculiar, dos años
+              que debí disfrutar al máximo, ya que la pandemia me obliga a
+              volver a mi pueblo y terminar esta etapa casi por completo en
+              línea, bastante triste, hice bastantes cosas, mejore como
+              desarrollador de software e invertir tiempo en el negocio
+              familiar, tuve algunas entrevistas explicando el proceso del
+              barro, elabore proyectos de programación entre otras cosas. */
+            </p>
+          </div>
+        </div>
+        <div class="history-block blocks-view">
+          <div class="img-container">
+            <img
+              src="../assets/desarrollando.png"
+              alt="desarrollador"
+              class="image-history-block"
+            />
+          </div>
+          <div class="text-container">
+            <p class="text-history-block">
+              /* Ahora estoy bastante ocupado con mi titulación, aprendiendo
+              cosas nuevas y empezando de cero en la ciudad de Querétaro. */
+            </p>
+          </div>
+        </div>
+        <div class="direct-contact blocks-view"></div>
       </div>
     </div>
-    <div class="loader-container">
-      <span class="loader-2"></span>
-    </div>
-    <div class="menu-content">
-      <ul>
-        <li onclick="menuBehavior()" class="close-button">
-          CERRAR MENÚ</i>
-        </li>
-        <li class="nav-item">
-          <a href="./about.html">
-            <p class="switch-frame about-me link-to">.sobre_mí()</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="./history.html">
-            <p class="switch-frame link-to">.historia()</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="./projects.html">
-            <p class="switch-frame link-to">.proyectos()</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="./contact.html">
-            <p class="switch-frame link-to">.contáctame()</p>
-          </a>
-        </li>
-      </ul>
+    <div class="loader">
+      <span class="loader-item"></span>
     </div>
   </body>
 </html>

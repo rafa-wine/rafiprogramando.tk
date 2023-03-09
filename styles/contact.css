@@ -1,36 +1,11 @@
-.global-section {
-  display: center;
-  width: 100%;
-  max-width: 1290px;
-  justify-content: center;
-  align-items: center;
-}
-.contact-view {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  gap: 25px;
-  margin-bottom: 65px;
+.contact {
+  color: var(--accent-color);
 }
 
-.social-container {
-  justify-content: start;
-}
-
-.text-title {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  font-size: 24px;
-  color: var(--brown-color);
-}
-
-.text-subtitle {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  font-size: 18px;
-  color: var(--terminal-comments);
+.text-presentation {
+  text-align: center;
+  border-radius: 25px;
+  padding: 25px 0px;
 }
 
 .contact-container {
@@ -130,7 +105,7 @@ button:hover {
   border-color: var(--accent-color);
 }
 
-.constact-sections {
+.contact-sections {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -153,6 +128,10 @@ button:hover {
   flex-direction: row;
   gap: 15px;
   width: fit-content;
+}
+
+.item-contact > a > .fa-brands {
+  font-size: 18px;
 }
 
 .item-contact > a > p,
@@ -221,8 +200,10 @@ button:hover {
     width: 95%;
   }
 
-  .text-presentation {
-    text-align: center;
+  .item-form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
   }
 
   .inputs-container {
@@ -237,11 +218,16 @@ button:hover {
 
   .inputs-container > div > input {
     width: 93%;
+    object-fit: contain;
   }
 
   .contact-sections {
     flex-direction: column;
     gap: 25px;
+  }
+
+  .button-check-container {
+    flex-direction: column;
   }
 
   .item-contact {

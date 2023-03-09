@@ -1,0 +1,132 @@
+.presentation-container {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo-colorize {
+  color: var(--accent-color);
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 250px;
+  width: fit-content;
+  margin-left: 50px;
+}
+
+.text-hi {
+  color: var(--brown-color);
+  font-size: 32px;
+  font-family: "Hardino", sans-serif;
+}
+
+.text-title {
+  font-family: "Hardino", sans-serif;
+  font-size: 36px;
+}
+
+.marker-title {
+  font-family: "Hardino", sans-serif;
+  color: var(--accent-color);
+}
+
+.text-subtitle {
+  font-size: 34px;
+}
+
+.marker-subtitle {
+  color: rgb(255, 83, 83);
+}
+
+.returns-section {
+  width: 600px;
+  margin: 15px 0px;
+}
+
+.text-simple {
+  color: var(--terminal-comments);
+}
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 325px;
+  height: 325px;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.avatar-section {
+  display: flex;
+  width: 325px;
+  height: 325px;
+  border: 1px solid var(--brown-color);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 900px) {
+  .presentation-container {
+    flex-direction: column;
+  }
+
+  .logo-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-container > a {
+    justify-content: center;
+  }
+
+  .text-section {
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 0px;
+  }
+
+  .returns-section {
+    width: 100%;
+  }
+
+  .text-hi {
+    font-size: 22px;
+  }
+
+  .text-title {
+    font-size: 26px;
+  }
+
+  .wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-subtitle {
+    font-size: 24px;
+  }
+
+  .text-simple {
+    font-size: 14px;
+  }
+}

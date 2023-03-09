@@ -1,25 +1,12 @@
-.global-render {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  margin: 60px 0px;
-  align-items: center;
+.about-me {
+  color: var(--accent-color);
 }
 
-.section-1 {
-  width: 100%;
-  max-width: 1290px;
-}
-
-.about-view {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  gap: 30px;
-}
-
-.social-container {
-  justify-content: start;
+.text-presentation {
+  text-align: center;
+  border: 2px dashed var(--secondary-color);
+  border-radius: 25px;
+  padding: 30px 0px;
 }
 
 .presentation-container {

@@ -1,13 +1,11 @@
-.social-container {
-  justify-content: start;
+.history {
+  color: var(--accent-color);
 }
 
-.history-container {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  gap: 50px;
-  margin-bottom: 60px;
+.text-presentation {
+  text-align: center;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 25px;
 }
 
 .history-block {
@@ -15,7 +13,6 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
 }
 
 .history-block_reverse {

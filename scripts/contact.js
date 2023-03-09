@@ -4,19 +4,6 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 import { db } from "./firebase.js";
 
-/* const q = query(collection(db, "projects"));
-
-const querySnapshot = await getDocs(q);
-
-querySnapshot.forEach((doc) => {
-  console.log(doc.id, " => ", doc.data());
-
-  document.getElementById("cards").innerHTML += `<div>
-  <p>${doc.data().title}</p>
-  <img src="${doc.data().cover}"  width="150"/>
-  </div>`;
-}); */
-
 const button = document.querySelector("button");
 const notifier = document.getElementsByClassName("empty-fields")[0];
 var radioFieldsData = 0;
@@ -84,7 +71,6 @@ button.addEventListener("click", async () => {
   if (radioFieldsData != 0 && textFieldsData == 4) {
     if (regexEmail.test(data.mail) && regexPhone.test(data.phone)) {
       // Add a new document in collection "messages"
-      /* await setDoc(doc(db, "messages", data.mail), data); */
       try {
         notificationItem(notifier, "Guardando datos...", "var(--accent-color)");
         await setDoc(doc(db, "messages", data.mail), data);
