@@ -6,14 +6,38 @@
   display: flex;
 }
 
-.body-example {
+.project-container {
+  margin-bottom: 25px;
+}
+
+#body-project,
+.project-container {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
+#body-project > p,
+#body-project > img {
+  max-width: 940px;
+}
+
+#body-project > p:not(.subtitles-view) {
+  font-size: 16px;
+  color: var(--terminal-comments);
+}
+
+#body-project > img {
+  border-radius: 25px;
+  background-position: center;
+}
+
 .header-project {
   position: relative;
+}
+
+.text-description-view {
+  text-align: end;
 }
 
 .image-project {
@@ -107,4 +131,9 @@
     width: 25px;
     height: 25px;
   }
+
+  /* #body-project > p,
+  #body-project > img {
+    max-width: 100%;
+  } */
 }
