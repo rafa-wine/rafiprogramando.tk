@@ -94,6 +94,16 @@ a {
   color: var(--terminal-comments);
 }
 
+.text-simple {
+  font-size: 18px;
+  color: var(--terminal-comments);
+}
+
+.image-simple {
+  width: 100%;
+  border-radius: 25px;
+}
+
 @keyframes pulse {
   to {
     transform: scale(0.8);
